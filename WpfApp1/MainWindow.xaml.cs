@@ -58,5 +58,35 @@ namespace WpfApp1
                 MessageBox.Show("To nie jest liczba");
             }
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            string kwotaa = kwota.Text;
+            int pieniadz;
+            float wynik;
+            if(int.TryParse(kwotaa, out pieniadz))
+            {
+                if (Euro.IsChecked == true)
+                {
+                    wynik = (float)(pieniadz * 0.26);
+                    MessageBox.Show(wynik.ToString());
+
+                }
+                else if(Frank.IsChecked == true)
+                {
+                    wynik=(float)(pieniadz * 0.22);
+                    MessageBox.Show(wynik.ToString());
+                }
+                else if(Dolar.IsChecked == true)
+                {
+                    wynik = (float)(pieniadz * 0.24);
+                    MessageBox.Show(wynik.ToString());
+                }
+                else
+                {
+                    MessageBox.Show("Wybierz walute");
+                }
+            }
+        }
     }
 }

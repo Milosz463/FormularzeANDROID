@@ -6,20 +6,34 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <StackPanel>
-        <TextBlock>Podaj bok figury</TextBlock>
-    <TextBox x:Name="sigma" Margin="10" Padding="10"></TextBox>
-        <TextBlock>Wybierz figure</TextBlock>
-        <ComboBox x:Name="figura">
-            <ComboBoxItem>Kwadrat</ComboBoxItem>
-            <ComboBoxItem>trojkat</ComboBoxItem>
-            <ComboBoxItem>pieciokat</ComboBoxItem>
-        </ComboBox>
-       
-            <WrapPanel>
-            <Button Click="Button_Click"
+    <TabControl>
+        <TabItem Header="obwod figury">
+            <StackPanel>
+                <TextBlock>Podaj bok figury</TextBlock>
+                <TextBox x:Name="sigma" Margin="10" Padding="10"></TextBox>
+                <TextBlock>Wybierz figure</TextBlock>
+                <ComboBox x:Name="figura">
+                    <ComboBoxItem>Kwadrat</ComboBoxItem>
+                    <ComboBoxItem>trojkat</ComboBoxItem>
+                    <ComboBoxItem>pieciokat</ComboBoxItem>
+                </ComboBox>
+
+                <WrapPanel>
+                    <Button Click="Button_Click"
                     Margin="10">oblicz obwod</Button>
-        </WrapPanel>
-        
-    </StackPanel>
+                </WrapPanel>
+
+            </StackPanel>
+        </TabItem>
+        <TabItem Header="Kalkulator walut">
+            <StackPanel>
+                <TextBlock HorizontalAlignment="Center">Podaj kwote</TextBlock>
+                <TextBox x:Name="kwota" Margin="10" Padding="10" Width="70"></TextBox>
+                <RadioButton GroupName="waluty" x:Name="Euro" IsChecked="True">Euro</RadioButton>
+                <RadioButton GroupName="waluty" x:Name="Frank">Frank</RadioButton>
+                <RadioButton GroupName="waluty" x:Name="Dolar">Dolar</RadioButton>
+                <Button Click="Button_Click_1" Width="100">Oblicz</Button>
+            </StackPanel>
+        </TabItem>
+    </TabControl>
 </Window>
