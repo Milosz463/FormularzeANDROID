@@ -35,5 +35,32 @@
                 <Button Click="Button_Click_1" Width="100">Oblicz</Button>
             </StackPanel>
         </TabItem>
+        <TabItem Header="obliczanie stopni">
+            <WrapPanel>
+                <UniformGrid Rows="1">
+                    <TextBlock>Podaj temperature</TextBlock>
+                    <TextBox x:Name="temp" Margin="10" Padding="10" Width="70"></TextBox>
+                    <StackPanel>
+                        <RadioButton>C</RadioButton>
+                        <RadioButton>F</RadioButton>
+                        <RadioButton>K</RadioButton>
+                    </StackPanel>
+                    <Button Width="100">Oblicz</Button>
+                </UniformGrid>
+            </WrapPanel>
+        </TabItem>
+        <TabItem Header="przelicznik">
+            <WrapPanel>
+                <UniformGrid Rows="1" Columns="2">
+            <TextBlock>Podaj 1 liczbe</TextBlock>
+            <TextBox x:Name="liczbaA"></TextBox>
+            <TextBlock>Podaj 2 liczbe</TextBlock>
+            <TextBox x:Name="liczbaB"></TextBox>
+                <Button Click="Button_Click_2">Silnia pierwszej</Button>        
+                <Button Click="Button_Click_3">nwd</Button>        
+                <Button Click="Button_Click_4">potega</Button>        
+            </UniformGrid>
+            </WrapPanel>
+        </TabItem>
     </TabControl>
 </Window>
