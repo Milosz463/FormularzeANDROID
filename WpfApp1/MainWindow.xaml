@@ -59,6 +59,7 @@
                 <Button Click="Button_Click_2">Silnia pierwszej</Button>        
                 <Button Click="Button_Click_3">nwd</Button>        
                 <Button Click="Button_Click_4">potega</Button>        
+                <Button Click="Button_Click_5">Suma</Button>        
             </UniformGrid>
             </WrapPanel>
         </TabItem>

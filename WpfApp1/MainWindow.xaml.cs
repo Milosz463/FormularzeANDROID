@@ -154,7 +154,28 @@ namespace WpfApp1
             }
             return a;
         }
-        
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            string liczba1 = liczbaA.Text;
+            string liczba2 = liczbaB.Text;
+            int liczba3;
+            int liczba4;
+            if (int.TryParse(liczba1, out liczba3) && int.TryParse(liczba2, out liczba4))
+            {
+                int suma = 0;
+                for(int i=liczba3; i<=liczba4; i++)
+                {
+                    suma = suma + i;
+                }
+               MessageBox.Show(suma.ToString());
+            }
+            else
+            {
+                MessageBox.Show("To nie jest liczba");
+            }
+
+        }
     }
     
 }
